@@ -24,12 +24,16 @@ description: >- # this means to ignore newlines until "baseurl:"
   Nickf2k's Blog! Bookmark my site for read news from Flutter
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nickf2k.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: nickf2k_
 github_username:  nickf2k
+facebook_username: nickf2k
+
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-avatar
 
 # Exclude from processing.
 # The following items will not be processed, by default.
