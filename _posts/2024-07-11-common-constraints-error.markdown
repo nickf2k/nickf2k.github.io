@@ -1,19 +1,22 @@
-# Solving ‘RenderBox was not laid out’, ‘overflow’, and ‘Vertical viewport was given unbounded height’ Errors in Flutter: All About Constraints
+# How to Fix Common Flutter Errors: ‘RenderBox was not laid out’, ‘overflow’, and ‘Vertical viewport was given unbounded height’
 
 July 11, 2024 9:00 AM @Vương Nguyễn Thiên 
 
-# 1. Introduction to Common Errors
+(You can view the content below in better format [here]
 
-![Untitled](Solving%20%E2%80%98RenderBox%20was%20not%20laid%20out%E2%80%99,%20%E2%80%98overflow%E2%80%99,%20%20f46a83299431412591e768eb178cef05/Untitled.png)
+## 1. Introduction to Common Errors
+
+![Untitled](https://github.com/nickf2k/nickf2k.github.io/assets/44032235/97545d4d-37ae-4142-a034-d4a632fe7953)
+
 
 Imagine spending hours crafting a beautiful Flutter app, only to be greeted with frustrating errors like ‘**RenderBox was not laid out**’, ‘**A RenderFlex overflowed by’**, and ‘**Vertical viewport was given unbounded height’**. These common issues can make even the most seasoned developers pull their hair out. But what if I told you there’s a way to banish these errors for good? The key lies in understanding Flutter Constraints.
 
-# 2. Understanding Flutter Constraint
+## 2. Understanding Flutter Constraint
 
 > **“Constraints go down, sizes go up, and the parent sets the position”**
 > 
 
-![Untitled](Solving%20%E2%80%98RenderBox%20was%20not%20laid%20out%E2%80%99,%20%E2%80%98overflow%E2%80%99,%20%20f46a83299431412591e768eb178cef05/Untitled%201.png)
+![Untitled (1)](https://github.com/nickf2k/nickf2k.github.io/assets/44032235/7d55d539-1050-43ef-8c6b-c2afc6f60cce)
 
 To truly understand how to handle those pesky layout errors, we need to dive into the basics of how Flutter handles constraints. The principle “constraints go down, sizes go up, and the parent sets the position” is key to this understanding.
 
@@ -25,7 +28,7 @@ To truly understand how to handle those pesky layout errors, we need to dive int
 
 Understanding this flow helps in diagnosing and solving layout issues. When a widget’s constraints are not set properly, errors like ‘RenderBox was not laid out’ can occur. Similarly, when a child widget’s size exceeds the parent’s constraints, you get errors like ‘A RenderFlex overflowed by’. The key to solving these errors is ensuring each widget properly communicates and respects these constraints.
 
-# 3. Common Errors and How Constraints Solve Them
+## 3. Common Errors and How Constraints Solve Them
 
 Errors like `RenderBox was not laid out`, `A RenderFlex overflowed by`, and `Vertical viewport was given unbounded height` can be frustrating roadblocks in Flutter development. Understanding how Flutter Constraints work is the key to resolving these issues for good.
 
@@ -51,8 +54,7 @@ Sometimes, the `RenderBox was not laid out` error is often caused by one of tw
 - `An InputDecorator...cannot have an unbounded width`
 
 <aside>
-💡 You can see an example of this error at [**flutter_common_constraint_errors**](https://github.com/nickf2k/flutter_common_constraint_errors/blob/main/lib/errors_page/renderbox_not_laid_out_page.dart)
-
+💡 You can see an example of this error at [flutter_common_constraint_errors](https://github.com/nickf2k/flutter_common_constraint_errors/blob/main/lib/errors_page/renderbox_not_laid_out_page.dart)
 </aside>
 
 ### 3.2 `A RenderFlex overflowed by` error
@@ -96,7 +98,8 @@ Using Expanded or Flex widgets within Row or Column, or setting specific constra
 
 Here is the solution for the above code (See comment in code): 
 
-![Screenshot 2024-07-10 at 00.09.30.png](Solving%20%E2%80%98RenderBox%20was%20not%20laid%20out%E2%80%99,%20%E2%80%98overflow%E2%80%99,%20%20f46a83299431412591e768eb178cef05/Screenshot_2024-07-10_at_00.09.30.png)
+![Screenshot 2024-07-10 at 00 09 30](https://github.com/nickf2k/nickf2k.github.io/assets/44032235/858547ea-c0fa-4343-b14c-b0a0082ff26e)
+
 
 ### 3.3 **`Vertical viewport was given unbounded height` error**
 
@@ -118,10 +121,12 @@ See the example [here](https://github.com/nickf2k/flutter_common_constraint_erro
 
 To resolve this error, you need to define the height of the `ListView`. To ensure it occupies the remaining vertical space within the `Column`, wrap it in an `Expanded` widget (as illustrated in the example below). Alternatively, you can assign a fixed height with a `SizedBox` widget or a proportional height using a `Flexible` widget.
 
+
 <aside>
 💡 Solution of the example is the comment in code, check it again
 
 </aside>
+
 
 ## 4. Conclusion
 
